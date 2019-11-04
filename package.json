@@ -1,0 +1,35 @@
+{
+  "name": "reactstrap-json-nav",
+  "version": "1.0.0",
+  "description": "Turn JSON into a bootstrap nav",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/babel src --out-file index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/recraftstudio/dummy-react-npm-module.git"
+  },
+  "author": "Manoj Singh Negi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeremylynch/reactstrap-json-nav"
+  },
+  "homepage": "https://github.com/jeremylynch/reactstrap-json-nav",
+  "peerDependencies": {
+    "react": "^16.6.1",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0"
+  },
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "reactstrap": "6.5.0"
+  }
+}
