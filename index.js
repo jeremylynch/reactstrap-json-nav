@@ -87,9 +87,11 @@ var Dropdown = function Dropdown(_ref5) {
 
 var JsonNav = function JsonNav(_ref6) {
   var json = _ref6.json,
-      link = _ref6.link;
+      link = _ref6.link,
+      _ref6$className = _ref6.className,
+      className = _ref6$className === void 0 ? "ml-auto" : _ref6$className;
   return _react["default"].createElement(_reactstrap.Nav, {
-    className: "ml-auto",
+    className: className,
     navbar: true
   }, json.map(function (nav, i) {
     var Component = nav.dropdownItems ? Dropdown : Item;

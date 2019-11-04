@@ -48,8 +48,8 @@ let Dropdown = ({dropdownItems, name, link}) => (
   </UncontrolledDropdown>
 )
 
-let JsonNav = ({json, link}) => (
-  <Nav className="ml-auto" navbar>
+let JsonNav = ({json, link, className="ml-auto"}) => (
+  <Nav className={className} navbar>
     {json.map((nav, i) => {
       let Component = nav.dropdownItems ? Dropdown : Item
       return <Component {...nav} key={i} link={link}/>
