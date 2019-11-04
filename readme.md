@@ -1,13 +1,19 @@
-Dummy react component
-====
+Turn JSON into a reactstrap JSON Nav
 
-This will be a how to guide for your fellow developers
-
+#### Install
 ```
-<DummyComponent />
+npm i reactstrap-json-nav
 ```
 
-etc
-===
+#### Usage
+```js
+import Navigation from 'reactstrap-json-nav'
 
-Thanks
+let json = [
+  {name: 'Contact Us', url: '/home'}
+]
+
+export default () => (
+  <Navigation json={json}/>
+)
+```
