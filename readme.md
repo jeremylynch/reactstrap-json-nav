@@ -33,6 +33,12 @@ export default ({}) => (
 )
 ```
 
+#### Props
+* json (Required) - Array of json hashes
+* link (optional) - replacement Link component
+* className (optional) - applied to outer Nav
+* ...options passed to link component
+
 #### Development
 1. Edit src/index.js
 2. Run `npm run build`

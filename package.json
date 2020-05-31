@@ -1,6 +1,6 @@
 {
   "name": "reactstrap-json-nav",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Turn JSON into a bootstrap nav",
   "main": "index.js",
   "scripts": {

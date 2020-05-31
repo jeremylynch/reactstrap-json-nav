@@ -53,7 +53,7 @@ let JsonNav = ({json, link, className="ml-auto", ...options}) => (
   <Nav className={className} navbar>
     {json.map((nav, i) => {
       let Component = nav.dropdownItems ? Dropdown : Item
-      return <Component {...nav} key={i} link={link} activeClassName={activeClassName} {...options}/>
+      return <Component {...nav} key={i} link={link} {...options}/>
     })}
   </Nav>
 )

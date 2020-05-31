@@ -105,8 +105,7 @@ var JsonNav = function JsonNav(_ref6) {
     var Component = nav.dropdownItems ? Dropdown : Item;
     return /*#__PURE__*/_react["default"].createElement(Component, _extends({}, nav, {
       key: i,
-      link: link,
-      activeClassName: activeClassName
+      link: link
     }, options));
   }));
 };
