@@ -22,7 +22,7 @@ var NormalLink = function NormalLink(_ref) {
       children = _ref.children,
       options = _objectWithoutProperties(_ref, ["to", "children"]);
 
-  return _react["default"].createElement("a", _extends({
+  return /*#__PURE__*/_react["default"].createElement("a", _extends({
     href: to
   }, options), children);
 };
@@ -34,7 +34,7 @@ var Link = function Link(_ref2) {
       options = _objectWithoutProperties(_ref2, ["to", "children", "link"]);
 
   var LinkComponent = link ? link : NormalLink;
-  return _react["default"].createElement(LinkComponent, _extends({
+  return /*#__PURE__*/_react["default"].createElement(LinkComponent, _extends({
     link: link,
     to: to,
     children: children
@@ -45,43 +45,49 @@ var Item = function Item(_ref3) {
   var url = _ref3.url,
       name = _ref3.name,
       children = _ref3.children,
-      link = _ref3.link;
-  return _react["default"].createElement(_reactstrap.NavItem, null, _react["default"].createElement(Link, {
+      link = _ref3.link,
+      options = _objectWithoutProperties(_ref3, ["url", "name", "children", "link"]);
+
+  return /*#__PURE__*/_react["default"].createElement(_reactstrap.NavItem, null, /*#__PURE__*/_react["default"].createElement(Link, _extends({
     to: url,
     className: "nav-link",
     link: link
-  }, name ? name : children));
+  }, options), name ? name : children));
 };
 
 var DropdownItem = function DropdownItem(_ref4) {
   var name = _ref4.name,
       url = _ref4.url,
       children = _ref4.children,
-      link = _ref4.link;
-  return _react["default"].createElement(Link, {
+      link = _ref4.link,
+      options = _objectWithoutProperties(_ref4, ["name", "url", "children", "link"]);
+
+  return /*#__PURE__*/_react["default"].createElement(Link, _extends({
     to: url,
     link: link,
     className: "dropdown-item"
-  }, name ? name : children);
+  }, options), name ? name : children);
 };
 
 var Dropdown = function Dropdown(_ref5) {
   var dropdownItems = _ref5.dropdownItems,
       name = _ref5.name,
-      link = _ref5.link;
-  return _react["default"].createElement(_reactstrap.UncontrolledDropdown, {
+      link = _ref5.link,
+      options = _objectWithoutProperties(_ref5, ["dropdownItems", "name", "link"]);
+
+  return /*#__PURE__*/_react["default"].createElement(_reactstrap.UncontrolledDropdown, {
     nav: true,
     inNavbar: true
-  }, _react["default"].createElement(_reactstrap.DropdownToggle, {
+  }, /*#__PURE__*/_react["default"].createElement(_reactstrap.DropdownToggle, {
     nav: true,
     caret: true
-  }, name), _react["default"].createElement(_reactstrap.DropdownMenu, {
+  }, name), /*#__PURE__*/_react["default"].createElement(_reactstrap.DropdownMenu, {
     right: true
   }, dropdownItems.map(function (item, i) {
-    return _react["default"].createElement(DropdownItem, _extends({}, item, {
+    return /*#__PURE__*/_react["default"].createElement(DropdownItem, _extends({}, item, {
       link: link,
       key: i
-    }));
+    }, options));
   })));
 };
 
@@ -89,16 +95,19 @@ var JsonNav = function JsonNav(_ref6) {
   var json = _ref6.json,
       link = _ref6.link,
       _ref6$className = _ref6.className,
-      className = _ref6$className === void 0 ? "ml-auto" : _ref6$className;
-  return _react["default"].createElement(_reactstrap.Nav, {
+      className = _ref6$className === void 0 ? "ml-auto" : _ref6$className,
+      options = _objectWithoutProperties(_ref6, ["json", "link", "className"]);
+
+  return /*#__PURE__*/_react["default"].createElement(_reactstrap.Nav, {
     className: className,
     navbar: true
   }, json.map(function (nav, i) {
     var Component = nav.dropdownItems ? Dropdown : Item;
-    return _react["default"].createElement(Component, _extends({}, nav, {
+    return /*#__PURE__*/_react["default"].createElement(Component, _extends({}, nav, {
       key: i,
-      link: link
-    }));
+      link: link,
+      activeClassName: activeClassName
+    }, options));
   }));
 };
 
