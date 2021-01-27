@@ -4,7 +4,8 @@ import {
   NavItem,
   UncontrolledDropdown,
   DropdownToggle,
-  DropdownMenu} from 'reactstrap';
+  DropdownMenu
+} from 'reactstrap';
 
 let NormalLink = ({to, children, ...options}) => (
   <a href={to} {...options}>
